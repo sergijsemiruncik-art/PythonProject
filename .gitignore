@@ -1,0 +1,15 @@
+/.DS_Store
+/.idea
+/.ipynb_checkpoints
+/.venv
+/Conspect.ipynb
+/Homework.ipynb
+/__pycache__
+/code3
+/foo.py
+/help.ipynb
+/main.py
+/raw_data.bin
+/test.txt
+/text.txt
+/traning.py
