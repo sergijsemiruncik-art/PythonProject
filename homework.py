@@ -1,6 +1,9 @@
 from datetime import datetime
 
 def get_days_from_today(date):
+    '''
+    calculates the number of days between a specified date and the current date.
+    '''
 
         try:
         #Converting to date from string
