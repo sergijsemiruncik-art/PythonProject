@@ -1,23 +1,22 @@
 from datetime import datetime
 
 def get_days_from_today(date):
-    '''
-    calculates the number of days between a specified date and the current date.
-    '''
-
-        try:
+    """
+    Function to get days from today
+    """
+    try:
         #Converting to date from string
-            date = datetime.strptime(date, '%Y-%m-%d')
-            concurrent_day = datetime.today()
-            concurrent_day = concurrent_day.strftime("%d")
+        date = datetime.strptime(date, '%Y-%m-%d')
+        concurrent_day = datetime.today()
+        concurrent_day = concurrent_day.strftime("%d")
         #Calculating the difference in days
-            delta_time = date.day - int(concurrent_day)
-            return delta_time
+        delta_time = date.day - int(concurrent_day)
+        return delta_time
         #Processing exceptions
-        except ValueError:
-            return 'Please enter a correct object'
-        except TypeError:
-            return 'Please enter a correct object'
+    except ValueError:
+        return 'Please enter a correct object'
+    except TypeError:
+        return 'Please enter a correct object'
 
 
 #Завдання 2
@@ -29,7 +28,7 @@ def get_numbers_ticket(min, max, quantity):
     Generates a sorted list of unique random numbers.
     """
     #Verifying the correctness of parameters
-    if quantity > max - min + 1:
+    if min < 1 or max > 1000 or quantity > max - min + 1:
         return []
     #Creating a set to fill it with unique numbers
     numbers = set()
@@ -70,7 +69,7 @@ if __name__ == "__main__":
     print(get_days_from_today(2025 - 12 - 1))
     print(get_days_from_today('jnfhndujsj'))
 
-    print(get_numbers_ticket(1, 1000, 12))
+    print(get_numbers_ticket(-10, 10, 5))
 
     print(normalize_phone('15017116'))
 
